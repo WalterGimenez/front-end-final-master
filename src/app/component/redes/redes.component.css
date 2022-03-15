@@ -1,0 +1,11 @@
+
+#linke, #face, #insta, #git{
+   width: 55px;
+   margin-left: 10px;
+}
+
+button{
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #C2684A;
+}
