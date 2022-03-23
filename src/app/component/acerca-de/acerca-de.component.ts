@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
+  
+  @Input() pasa!:boolean;
   datoPortfolio: any;
   photoUnaj: any;
 
@@ -14,7 +16,7 @@ export class AcercaDeComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
+      
       this.datoPortfolio = data;
       this.photoUnaj = data.company;
     });

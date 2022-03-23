@@ -5,14 +5,14 @@
         <form action="#">
             <div class="mb-4">
                 <label for="usuario" class="form-label">Usuario</label>
-                <input type="text" class="form-control" name="usuario">
+                <input type="text" class="form-control" name="usuario" #user>
             </div>
             <div class="mb-4">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password">
+                <input type="password" class="form-control" name="password" #password>
             </div>
             <div class="d-grid">
-                <button type="submit" class="btn btn-btn-success">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-btn-success" (click)="validateUser(user.value, password.value)">Iniciar Sesión</button>
             </div>
         </form>
 

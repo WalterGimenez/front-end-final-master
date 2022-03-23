@@ -14,7 +14,7 @@ export class PaginaErrorComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
+      
       this.datoErroneo = data.error;
     });
   }

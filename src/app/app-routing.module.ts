@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EdicionComponent } from './component/edicion/edicion.component';
 import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
 import { PaginaErrorComponent } from './component/pagina-error/pagina-error.component';
@@ -8,6 +9,7 @@ import { PaginaErrorComponent } from './component/pagina-error/pagina-error.comp
 const routes: Routes = [
   {path: '', component: HeaderComponent, pathMatch: 'full'},
   {path:'login', component: LoginComponent, pathMatch: 'full'},
+  {path:'edicion', component: EdicionComponent, pathMatch: 'full'},
   {path:'**', component: PaginaErrorComponent}
 ];
 

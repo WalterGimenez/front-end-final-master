@@ -14,7 +14,7 @@ export class BannerComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
+      
       this.datoPortfolio = data;
     });
   }

@@ -5,7 +5,7 @@ body{
 }
 
 #add{
-    height: 20px;
+    height: 120px;
     margin-top: 25px;
     
  }
@@ -19,3 +19,14 @@ body{
     margin-right: 70px;
     margin-top: -5px;
  }
+
+ .card, .card-footer{
+   background-color: bisque;
+   border: none;
+ }
+ a{
+   margin-left: 5px;
+ }
+#add2{
+   margin-top: 25px;
+}
