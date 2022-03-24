@@ -18,7 +18,7 @@ import { LoginComponent } from './component/login/login.component';
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
 import { EdicionComponent } from './component/edicion/edicion.component';
 import { SharedComponent } from './component/shared/shared.component';
-import { TitleComponent } from './component/title/title.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { TitleComponent } from './component/title/title.component';
     ProyectosComponent,
     EdicionComponent,
     SharedComponent,
-    TitleComponent
+
   ],
   imports: [
     BrowserModule,

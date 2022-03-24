@@ -1,27 +1,31 @@
 <div>
-    <div class="row">
-        <div  class="col-xs-12 col-sm-12 col-md-11 col-lg-11">
+
+<div class="card">
+    <div class="card-horizontal">
+        <div class="card-body">
             <h1>Proyectos</h1>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-            <img [src]="datoPortfolio.suma" alt=" logo agregar" class="img-fluid" [id]="datoPortfolio.addId">
+        <div class="card-footer">
+            <a href="#"  ><img [src]="datoPortfolio.suma" alt="logo" id="add"></a>
         </div>
     </div>
-    <ul>
-        <li *ngFor="let educacion of proyectList">
-            <div class="row">
-                <div class="col-lg-10">
-                    <h2>{{proyectList.name}}</h2>
-                    <p>{{proyectList.description}}</p>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-                    <img [src]="datoPortfolio.pencil" alt=" logo editar" class="img-fluid" [id]="datoPortfolio.pencilId">
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-                    <img [src]="datoPortfolio.trash" alt=" logo borrar" class="img-fluid" [id]="datoPortfolio.trashId">
-                </div>
-            </div>
-                
-        </li>
-    </ul>
+
+<div *ngFor="let proyecto of proyectList" >
+    <div class="card">
+        <div class="card-horizontal">
+          <div class="img-square-wrapper">
+                <img [src]="proyecto.photo" alt="logo" id="proyec">
+          </div>
+         <div class="card-body">
+                <h4 class="card-title"> <h2>{{proyecto.name}}</h2></h4> 
+                <p class="card-text">{{proyecto.description}}</p>
+         </div>
+         <div class="card-footer">
+            
+            <br>
+            <a href="#" class="btn btn-primary">Editar</a>
+            <a href="#" class="btn btn-primary">Borrar</a>
+        </div>
+        </div>
+    </div>
 </div>

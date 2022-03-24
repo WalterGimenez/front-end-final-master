@@ -83,7 +83,8 @@
     }],
     "proyectos":[{
         "name": "",
-        "description": ""
+        "description": "",
+	"photo":"./assets/signo.png"
     }],
     "error":{
         "img": "./assets/signo.png",

@@ -5,7 +5,7 @@
                 <h1>Experiencia Profesional</h1>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary" id="add2">Agregar</a>
+                <a href="#"  ><img [src]="datoPortfolio.suma" alt="logo" id="add"></a>
             </div>
         </div>
     </div>
@@ -19,11 +19,11 @@
           </div>
          <div class="card-body">
                 <h4 class="card-title">{{job.name}} <h3>{{job.start}}/{{job.end}}</h3></h4>
-                <h5>Supervisor del Centro de Copiado</h5>
+                <h5>{{job.position}}</h5>
                 <p class="card-text">{{job.description}}</p>
             </div>
          <div class="card-footer">
-            <small class="text-muted">Modo edicion</small>
+            
             <br>
             <a href="#" class="btn btn-primary">Editar</a>
             <a href="#" class="btn btn-primary">Borrar</a>

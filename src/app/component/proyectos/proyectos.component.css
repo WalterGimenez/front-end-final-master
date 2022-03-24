@@ -3,6 +3,12 @@ h1{
     margin-top: 20px;
 }
 
-li{
-    list-style: none;
+
+#proyec{
+    width: 80px;
+    margin-left: 26px;
+}
+
+a{
+    margin-bottom: 20px;
 }

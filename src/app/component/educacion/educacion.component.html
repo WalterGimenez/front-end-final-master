@@ -1,31 +1,31 @@
-<div>
-    <div class="row">
-        <div  class="col-xs-12 col-sm-12 col-md-11 col-lg-11">
+
+<div class="card">
+    <div class="card-horizontal">
+        <div class="card-body">
             <h1>Educación</h1>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-            <img [src]="datoPortfolio.suma" alt=" logo agregar" class="img-fluid" [id]="datoPortfolio.addId">
+        <div class="card-footer">
+            <a href="#"  ><img [src]="datoPortfolio.suma" alt="logo" id="add"></a>
         </div>
     </div>
-    <ul>
-        <li *ngFor="let educacion of educationList">
-            <div class="row">
-                <div class="col-lg-1">
-                    <img [src]="educacion.img" alt="logo" id="educa">  
-                </div>
-                <div class="col-lg-9">
-                    <h2>{{educacion.name}} <h3>{{educacion.start}}/{{educacion.end}}</h3></h2>
-                    <p>{{educacion.description}}</p>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-                    <img [src]="datoPortfolio.pencil" alt=" logo editar" class="img-fluid" [id]="datoPortfolio.pencilId">
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-                    <img [src]="datoPortfolio.trash" alt=" logo borrar" class="img-fluid" [id]="datoPortfolio.trashId">
-                </div>
-            </div>
-                
-        </li>
-    </ul>
 </div>
-
+    
+    <div *ngFor="let educacion of educationList" >
+        <div class="card">
+            <div class="card-horizontal">
+              <div class="img-square-wrapper">
+                    <img [src]="educacion.img" alt="logo" id="educa">
+              </div>
+             <div class="card-body">
+                    <h4> <h2>{{educacion.name}} <h3>{{educacion.start}}/{{educacion.end}}</h3></h2></h4> 
+                    <p class="card-text">{{educacion.description}}</p>
+             </div>
+             <div class="card-footer">
+                
+                <br>
+                <a href="#" class="btn btn-primary">Editar</a>
+                <a href="#" class="btn btn-primary">Borrar</a>
+            </div>
+            </div>
+        </div>
+    </div>
