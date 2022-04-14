@@ -18,6 +18,9 @@ import { LoginComponent } from './component/login/login.component';
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
 import { EdicionComponent } from './component/edicion/edicion.component';
 import { SharedComponent } from './component/shared/shared.component';
+import { UserModelComponent } from './model/user-model/user-model.component';
+import { FormsModule } from '@angular/forms'; 
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -36,15 +39,17 @@ import { SharedComponent } from './component/shared/shared.component';
     ProyectosComponent,
     EdicionComponent,
     SharedComponent,
-
+    UserModelComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,    
+    HttpClientModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({})
   ],
-  providers: [PortfolioService],
+  providers: [PortfolioService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

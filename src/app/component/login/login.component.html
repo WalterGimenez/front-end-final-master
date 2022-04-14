@@ -1,7 +1,7 @@
-<div class="container">
+<!--<div class="container">
     <div class="row">
         <h2 class="fw-bold text-center py-5">Bienvenido</h2>
-        <!--Login-->
+        
         <form action="#">
             <div class="mb-4">
                 <label for="usuario" class="form-label">Usuario</label>
@@ -16,5 +16,36 @@
             </div>
         </form>
 
+    </div>
+</div> -->
+<!-- login.component.html -->
+<!-- 
+<div class="login">
+    <form class="custom-form" method="post">
+      <h1>Login</h1>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+        required="required"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Contraseña"
+        required="required"
+      />
+      <button type="submit" (click)="login()">Log in</button>
+    </form>
+  </div> -->
+  <div class="container">
+    <div class="alert alter-warning" *ngIf="invalidLogin">{{ errorMessage }}</div>
+    
+    <div>
+        User Name: <input type="text" name="username" [(ngModel)] = "username" placeholder="Usuario"/>
+        Password: <input type="password" name="password" [(ngModel)]= "password" placeholder="Contraseña"/>
+        <button (click)="hadleLogin()"  class="btn btn-primary">Login</button>
     </div>
 </div>
