@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { UserService } from 'src/app/services/user.service';
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit{
   //password!: string;
   username = "walter";
   password!: string;
-  errorMessage = "Credenciales inválidas";
+  errorMessage = "Credenciales inválidas ";
   invalidLogin = false;
 
   constructor(public userService: UserService, public router: Router, private authentication: AuthenticationService) {}
@@ -29,11 +29,17 @@ export class LoginComponent implements OnInit{
 
   hadleLogin(){
     if(this.authentication.authenticate(this.username, this.password)){
-      this.router.navigate(['']);
+      this.router.navigate(['edicion']);
     }else{
       this.invalidLogin = true;
     }
   }
+
+  userLogged(){
+    
+  }
+
+  
 
   ngOnInit (): void {
   }

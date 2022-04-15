@@ -7,12 +7,15 @@ import { SharedComponent } from '../shared/shared.component';
   styleUrls: ['./edicion.component.css']
 })
 export class EdicionComponent implements OnInit {
-  validate: any;
+ /* validate: any;
 
   constructor(private pass: SharedComponent) { }
   
   ngOnInit(): void {
     this.validate = this.pass;
+  }*/
+  ngOnInit(): void {
+      
   }
 
 }
